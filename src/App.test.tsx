@@ -6,7 +6,10 @@ describe('<App />', () => {
   it('render component correctly', () => {
     render(<App />);
 
-    const msg = screen.getByText('Hello World!');
-    expect(msg).toBeInTheDocument();
+    const title = screen.getByText('로그인');
+    expect(title).toBeInTheDocument();
+
+    const emailLogin = screen.getByText('이메일로 로그인');
+    expect(emailLogin).toBeInTheDocument();
   });
 });
