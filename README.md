@@ -2,6 +2,17 @@
 
 React와 TDD 방법론을 이용한 메모 사이트.
 
+## 메인색
+
+- primary: #0077b6
+- danger: #d00000
+- warning: #fca311
+- light: #ffffff
+- dark: #353535
+- success: #06d6a0
+- info: #4ecdc4
+- secondary: #8d99ae
+
 ## 개발 일지
 
 > 2021-07-24 create project
