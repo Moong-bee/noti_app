@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TwinButtonContainer /. 올바른 랜더링 1`] = `
+<div>
+  <div
+    class="sc-dlnjwi gouvym"
+  >
+    <div
+      class="sc-bdnxRM eANPGp"
+      type="underline"
+    >
+      <div
+        class="sc-gtsrHT fjHGAp"
+        type="underline"
+      >
+        LButton
+      </div>
+    </div>
+    <div
+      class="sc-bdnxRM QPllb"
+      type="fill"
+    >
+      <div
+        class="sc-gtsrHT mNCHF"
+        type="fill"
+      >
+        RButton
+      </div>
+    </div>
+  </div>
+</div>
+`;

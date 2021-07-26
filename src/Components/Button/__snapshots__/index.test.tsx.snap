@@ -2,7 +2,17 @@
 
 exports[`<Button /> 올바른 랜더링 1`] = `
 .c0 {
-  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1l align-items:center;
+  -ms-flex: 1l align-items:center;
+  flex: 1l align-items:center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 8px;

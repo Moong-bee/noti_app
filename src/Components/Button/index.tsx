@@ -7,7 +7,10 @@ interface ContainerProps {
   readonly hoverColor: string
 }
 const Container = Styled.div<ContainerProps>`
-    text-align: center;
+    display: flex;
+    flex: 1l
+    align-items: center;
+    justify-content: center;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 8px;
@@ -19,18 +22,21 @@ const Container = Styled.div<ContainerProps>`
     &:hover{
         background-color: ${props.hoverColor};
     }
-    &:active{
-        box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
-    }`}
+    `}
     ${(props) =>
       props.type === 'underline' &&
-      `background-color: transparent;
+      `
+      background-color: transparent;
     `}
+    &:active{
+      box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
+    }
 `
 
 interface LabelProps {
   readonly type: string
   readonly backgroundColor: string
+  readonly hoverColor: string
 }
 const Label = Styled.div<LabelProps>`
     color: #FFFFFF;
@@ -41,7 +47,11 @@ const Label = Styled.div<LabelProps>`
       `
       text-decoration: underline;
       text-underline-position: under;
-      color: ${props.backgroundColor}
+      color: ${props.backgroundColor};
+
+      &:hover {
+        color: ${props.hoverColor};
+      }
     `}
 `
 
@@ -66,7 +76,7 @@ export const Button = ({
       backgroundColor={backgroundColor}
       hoverColor={hoverColor}
       onClick={onClick}>
-      <Label type={type} backgroundColor={backgroundColor}>
+      <Label type={type} backgroundColor={backgroundColor} hoverColor={hoverColor}>
         {label}
       </Label>
     </Container>
