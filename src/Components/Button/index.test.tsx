@@ -41,4 +41,15 @@ describe('<Button />', () => {
     fireEvent.click(button)
     expect(handleClick).toHaveBeenCalledTimes(1)
   })
+
+  it('버튼 스타일 변경', () => {
+    render(<Button label="버튼 1" type="underline" />)
+
+    const label = screen.getByText('버튼 1')
+    const parent = label.parentElement
+
+    expect(parent).toHaveStyleRule('background-color', 'transparent')
+    expect(label).toHaveStyleRule('color', '#0077b6')
+    expect(label).toHaveStyleRule('text-decoration', 'underline')
+  })
 })

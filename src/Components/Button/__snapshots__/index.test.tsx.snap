@@ -26,9 +26,11 @@ exports[`<Button /> 올바른 랜더링 1`] = `
 <div>
   <div
     class="c0"
+    type="fill"
   >
     <div
       class="c1"
+      type="fill"
     >
       버튼
     </div>
