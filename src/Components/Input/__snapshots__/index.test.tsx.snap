@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> 올바른 랜더링 - placeholder 1`] = `
+<div>
+  <input
+    class="sc-bdnxRM lanArR"
+    placeholder="default placeholder"
+    value=""
+  />
+</div>
+`;
