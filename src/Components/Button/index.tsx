@@ -38,6 +38,7 @@ interface LabelProps {
   readonly backgroundColor: string
   readonly hoverColor: string
 }
+
 const Label = Styled.div<LabelProps>`
     color: #FFFFFF;
     font-size: 16px;

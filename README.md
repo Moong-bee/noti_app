@@ -9,7 +9,7 @@ React와 TDD 방법론을 이용한 메모 사이트.
 - warning: #fca311
 - light: #ffffff
 - dark: #353535
-- success: #06d6a0
+- success: #00a358
 - info: #4ecdc4
 - secondary: #8d99ae
 
