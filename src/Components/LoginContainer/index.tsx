@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Styled from 'styled-components'
 import { Input, Button } from 'Components'
-import firebase from 'firebase'
+import firebase from 'firebase/app'
+import 'firebase/auth'
 
 const Container = Styled.div`
     display: flex;
@@ -40,45 +41,13 @@ export const LoginContainer = () => {
       })
   }
 
-  const getUser = () => {
-    const user = firebase.auth().currentUser
-    if (user !== null) {
-      // The user object has basic properties such as display name, email, etc.
-      const displayName = user.displayName
-      const email = user.email
-      const photoURL = user.photoURL
-      const emailVerified = user.emailVerified
-
-      // The user's ID, unique to the Firebase project. Do NOT use
-      // this value to authenticate with your backend server, if
-      // you have one. Use User.getToken() instead.
-      const uid = user.uid
-
-      console.log(displayName, email, photoURL, emailVerified, uid)
-
-      user
-        .updateProfile({
-          displayName: '테스터',
-        })
-        .then(() => {
-          console.log('Success!')
-        })
-
-      if (!emailVerified) {
-        user.sendEmailVerification().then((res) => console.log('Success!', res))
-      }
-    }
-  }
-
   return (
     <Container>
       <InputContainer>
         <Input placeholder="Email" onChange={onEmailChange} />
-        <Input placeholder="Password" onChange={onPasswordChange} />
+        <Input type="password" placeholder="Password" onChange={onPasswordChange} />
       </InputContainer>
       <Button label="Login" onClick={onLogin} />
-
-      <Button label="test" onClick={getUser} />
     </Container>
   )
 }

@@ -14,10 +14,12 @@ interface Props {
   readonly placeholder?: string
   readonly value?: string
   readonly onChange?: (text: string) => void
+  readonly type?: string
 }
-export const Input = ({ placeholder, value, onChange }: Props) => {
+export const Input = ({ placeholder, value, onChange, type = 'text' }: Props) => {
   return (
     <InputBox
+      type={type}
       value={value}
       placeholder={placeholder}
       onChange={(e) => {
